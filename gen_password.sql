@@ -1,3 +1,4 @@
+/* For Mysql 5.7 */
 select replace(group_concat(substring(pwd_char,char_pos,1)),',','')
   from (select '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ~!@#$%^&*' as pwd_char,
                1 as pos_id,round(rand()*52+10.5) as char_pos
